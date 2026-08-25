@@ -1,0 +1,22 @@
+[
+    {
+        "rating": "⭐⭐⭐⭐⭐",
+        "review": "The food was amazing and the service was excellent. I'll definitely be coming back!",
+        "name": "Sarah"
+    },
+    {
+        "rating": "⭐⭐⭐⭐⭐",
+        "review": "One of the best places to get delicious meals. Everything tasted fresh and well prepared.",
+        "name": "David"
+    },
+    {
+        "rating": "⭐⭐⭐⭐⭐",
+        "review": "The atmosphere was wonderful and the food was absolutely delicious.",
+        "name": "Michael"
+    },
+    {
+        "rating": "⭐⭐⭐⭐⭐",
+        "review": "Great food, friendly staff, and excellent service. I highly recommend this restaurant.",
+        "name": "Grace"
+    }
+]

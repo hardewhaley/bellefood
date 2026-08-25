@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "🍅",
+        "title": "Fresh Ingredients",
+        "description": "We use quality ingredients to prepare delicious meals."
+    },
+    {
+        "icon": "👨‍🍳",
+        "title": "Expert Chefs",
+        "description": "Our meals are prepared with skill and attention to detail."
+    },
+    {
+        "icon": "⚡",
+        "title": "Fast Service",
+        "description": "We value your time and serve your meals as quickly as possible."
+    },
+    {
+        "icon": "❤️",
+        "title": "Customer Satisfaction",
+        "description": "Your satisfaction is at the heart of everything we do."
+    }
+]

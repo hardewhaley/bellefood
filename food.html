@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELLE FOOD</title>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body id="home">
+    <div class="nav-container">
+        <h1>BelleFoods</h1>
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#review">Review</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <button class="btn">Order Now</button>
+        </ul>
+    </div>
+    <div class="hero">
+        <div data-aos="zoom-in" data-aos-duration="1000"
+    data-aos-delay="300"
+    data-aos-offset="200"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">
+            <h1>Welcome to BelleFoods</h1><br>
+            <p>Welcome to BelleFoods, your destination for delicious, freshly prepared meals made with carefully selected ingredients and a passion for great taste. Whether you're craving a satisfying local dish, a quick meal, or something special to enjoy with family and friends, we have something to delight every appetite.</p>
+            <button>Explore Our Menu</button>
+        </div>
+    </div>
+    <section id="about">
+        <div class="about" data-aos="fade-right">
+            <h1>About Our Restaurant</h1>
+            <p>BelleFoods is a welcoming restaurant dedicated to serving delicious, freshly prepared meals made with quality ingredients and a passion for great taste. We offer a variety of flavorful dishes carefully prepared to satisfy every appetite. </p>
+            <div class="about-container">
+                <h1>Our Story</h1>
+                <p>BelleFoods started with a simple idea: good food brings people together. What began as a passion for preparing delicious, homemade meals grew into a restaurant dedicated to serving fresh, flavorful dishes that everyone can enjoy.</p>
+                <p>At BelleFoods, every meal is prepared with carefully selected ingredients, attention to detail, and a genuine love for food. From traditional favorites to satisfying everyday meals, we aim to make every plate special.</p>
+                <button class="btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section id="menu">
+        <div class="menu" data-aos="zoom-in" data-aos-duration="1000">
+            <h1>OUR MENU</h1>
+            <p>Discover some of our most-loved dishes, freshly prepared with quality ingredients and delicious flavors. From classic favorites to tasty specialties, our popular menu has something to satisfy every craving.</p>
+            <div id="menuList">
+            </div>
+         </div>
+    </section>
+     <div class="whychooseus">
+        <h1>Why Choose Us?</h1>
+         <p>
+            We are committed to giving you delicious meals,
+            excellent service, and an unforgettable experience.
+        </p>
+        <div id="whyContainer">
+
+        </div>
+     </div>
+     <section id="services">
+         <div class="services">
+            <h1>Our Services</h1>
+             <p>
+                We are committed to giving you delicious meals,
+                excellent service, and an unforgettable experience.
+            </p>
+            <div id="servicesContainer">
+    
+            </div>
+         </div>
+     </section>
+     <section id="gallery">
+         <div class="gallery-container">
+            <h1 data-aos="fade-up">Our Gallery</h1>
+            <div class="gallery">
+                <a href="images/amala.jpg"><img src="images/amala.jpg" alt="amala"></a>
+                 <a href="images/assorted.jpg"><img src="images/assorted.jpg" alt="assorted"></a>
+                 <a href="images/barb.jpg"><img src="images/barb.jpg" alt="barbecue"></a>
+                 <a href="images/beans.jpg"><img src="images/beans.jpg" alt="beans"></a>
+                <a href="images/full chicken.jpg"><img src="images/full chicken.jpg" alt="chicken"></a>
+                 <a href="images/Hamburger.jpg"><img src="images/Hamburger.jpg" alt="hamburger"></a>
+                 <a href="images/Hero food .jpg"><img src="images/Hero food .jpg" alt="herofood"></a>
+                 <a href="images/iyan and egusi.jpg"><img src="images/iyan and egusi.jpg" alt="iyan"></a>
+                 <a href="images/jollof.jpg"><img src="images/jollof.jpg" alt="jollof"></a>
+                 <a href="images/egusi.jpg"><img src="images/egusi.jpg" alt="noodles"></a>
+                 <a href="images/hero.jpg"><img src="images/hero.jpg" alt="hero"></a>
+                 <a href="images/ama.jpg"><img src="images/ama.jpg" alt="ama"></a>
+                 <a href="images/peppersoup.jpg"><img src="images/peppersoup.jpg" alt="pepper"></a>
+                 <a href="images/small.jpg"><img src="images/small.jpg" alt="small"></a>
+                 <a href="images/snack.jpg"><img src="images/snack.jpg" alt="snack"></a>
+                 <a href="images/rice.jpg"><img src="images/rice.jpg" alt="rice"></a>
+            </div> 
+         </div>
+     </section>
+    <section class="reviews" id="review">
+
+    <h1 data-aos="fade-up" data-aos-delay="100">Customer Reviews</h1>
+
+    <div id="reviewContainer" data-aos="fade-right" data-aos-delay="200"></div>
+
+    <div class="review-buttons">
+        <button id="prevBtn">❮</button>
+        <button id="nextBtn">❯</button>
+    </div>
+</section>
+<section class="reservation" id="reservation">
+
+    <div class="reservation-header">
+        <h1>Reserve a Table</h1>
+
+        <p>
+            Planning to dine with us? Reserve your table in advance
+            and enjoy a wonderful dining experience at BELLE FOOD.
+        </p>
+    </div>
+
+    <div class="reservation-container">
+
+        <form id="reservationForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+
+                    <select id="guests" name="guests" required>
+
+                        <option value="">Select guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="7">7 Guests</option>
+                        <option value="8">8 Guests</option>
+                        <option value="9">9 Guests</option>
+                        <option value="10">10+ Guests</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time</label>
+
+                    <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="request">Special Request</label>
+
+                <textarea
+                    id="request"
+                    name="request"
+                    rows="5"
+                    placeholder="Any special request?"
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="reserve-btn">
+                Reserve a Table
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<section class="contact" id="contact">
+
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+
+        <p>
+            Have a question, want to make a reservation, or simply want to
+            say hello? We'd love to hear from you.
+        </p>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+
+                <div>
+                    <h3>Address</h3>
+                    <p>
+                        3 Aladejubelo Street,<br>
+                        Ibadan, Nigeria
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+
+                <div>
+                    <h3>Phone</h3>
+                    <p>
+                        <a href="tel:+2348154335354">
+                            +234 815 433 5354 
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>
+                        <a href="mailto:bellefoodNigeira@gmail.com">
+                            bellefoodNigeira@gmail.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="contact-item">
+                <div class="contact-icon">🕐</div>
+
+                <div>
+                    <h3>Opening Hours</h3>
+
+                    <p>
+                        <strong>Monday – Saturday:</strong><br>
+                        8:00 AM – 10:00 PM
+                    </p>
+
+                    <p>
+                        <strong>Sunday:</strong><br>
+                        10:00 AM – 8:00 PM
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Google Maps -->
+        <div class="map-container">
+
+            <iframe
+                src="https://www.google.com/maps?q=Lagos,Nigeria&output=embed"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- <div class="image" data-aos="zoom-out" data-aos-duration="1000"
+   
+    data-aos-offset="200"
+    data-aos-easing="ease-in-out"
+    data-aos-once="true">
+        <img src="images/Hero food .jpg" alt="Food1" class="img">
+        <img src="images/hero.jpg" alt="food2" class="img">
+    </div> -->
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="food.js"></script>
+
+<script>
+  AOS.init({
+    duration: 2000,
+    once: true
+  });
+</script>
+</html>

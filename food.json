@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "name": "HOT AMALA", 
+        "price": 2500, 
+        "image": "images/amala.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "2",
+        "name": "NOODLES", 
+        "price": 3000, 
+        "image": "images/noodles.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "3",
+        "name": "CATFISH PEPPERSOUP", 
+        "price": 4000, 
+        "image": "images/peppersoup.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "4",
+        "name": "BEANS AND PLANTAIN", 
+        "price": 2000, 
+        "image": "images/beans.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "5",
+        "name": "FULL CHICKEN", 
+        "price": 2500, 
+        "image": "images/full chicken.jpg",
+        "button": "Order"
+    },
+     {
+        "id": "6",
+        "name": "ASSORTED PEPPERSOUP", 
+        "price": 3500, 
+        "image": "images/assorted.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "7",
+        "name": "PASTA", 
+        "price": 4500, 
+        "image": "images/pasta.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "8",
+        "name": "SMALL CHOPS", 
+        "price": 1500, 
+        "image": "images/small.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "9",
+        "name": "SHAWARMA", 
+        "price": 3500, 
+        "image": "images/shawarma.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "10",
+        "name": "BARBECUE", 
+        "price": 11000, 
+        "image": "images/barb.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "11",
+        "name": "HAMBURGER", 
+        "price": 11000, 
+        "image": "images/Hamburger.jpg",
+        "button": "Order"
+    },
+    {
+        "id": "12",
+        "name": "SMOKY JOLLOF", 
+        "price": 11000, 
+        "image": "images/jollof.jpg",
+        "button": "Order"
+    }
+
+    
+    
+    
+]
