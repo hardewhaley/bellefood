@@ -105,7 +105,8 @@ body{
     background-position: center;
     color: white;
     padding: 20px;
-    padding-top: 100px;
+    padding: 100px 50px 60px;
+    box-sizing: border-box;
     font-size: 22px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -115,7 +116,7 @@ body{
     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
 }
 .hero h1{
-    font-weight: 52px;
+    font-weight: bold;
     line-height: 1.1;
     text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.7);
     color: firebrick;
@@ -152,6 +153,51 @@ body{
 
     100% {
         transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        min-height: 450px;
+        padding: 70px 25px 50px;
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .hero button {
+        width: 180px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        min-height: 430px;
+        padding: 60px 20px 40px;
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.5;
+        word-spacing: 2px;
+    }
+
+    .hero button {
+        width: 170px;
+        padding: 10px;
+        font-size: 15px;
     }
 }
 .about {
