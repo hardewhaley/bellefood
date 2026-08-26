@@ -43,7 +43,7 @@ fetch("food.json")
     });
 
 // why choose us
-fetch("whyChoose.json")
+fetch("whychoose.json")
     .then(response => response.json())
     .then(data => {
 
@@ -74,7 +74,7 @@ fetch("whyChoose.json")
 
         });
 
-        AOS.refresh();
+        AOS.refreshHard();
 
     })
     .catch(error => {
