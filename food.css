@@ -298,6 +298,7 @@ body{
 
     .about-container .btn {
         margin-left: 15px;
+        width: 150px;
     }
 }
 
