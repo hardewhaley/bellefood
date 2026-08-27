@@ -1,21 +1,21 @@
 [
     {
-        "icon": "🍅",
+        "icon": "fa-solid fa-carrot",
         "title": "Fresh Ingredients",
         "description": "We use quality ingredients to prepare delicious meals."
     },
     {
-        "icon": "👨‍🍳",
+        "icon": "fa-solid fa-user-tie",
         "title": "Expert Chefs",
         "description": "Our meals are prepared with skill and attention to detail."
     },
     {
-        "icon": "⚡",
+        "icon": "fa-solid fa-bolt",
         "title": "Fast Service",
         "description": "We value your time and serve your meals as quickly as possible."
     },
     {
-        "icon": "❤️",
+        "icon": "fa-solid fa-heart",
         "title": "Customer Satisfaction",
         "description": "Your satisfaction is at the heart of everything we do."
     }

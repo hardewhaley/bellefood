@@ -1,9 +1,9 @@
 const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
+const navMenu = document.querySelector(".nav-menu");
 
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
 
 fetch("food.json")
     .then(response => response.json())
@@ -17,8 +17,11 @@ fetch("food.json")
                 <div 
                     class="food-card"
                     data-aos="fade-up"
-                      data-aos-duration = "1000"
+                    data-aos-duration="800"
                     data-aos-delay="${index * 150}"
+                    data-aos-offset="100"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="true"
                 >
 
                     <img src="${food.image}" alt="${food.name}">
@@ -34,7 +37,7 @@ fetch("food.json")
 
         });
 
-        // Refresh AOS after creating the cards
+        // Refresh AOS after generating the cards
         AOS.refresh();
 
     })
@@ -55,27 +58,25 @@ fetch("whychoose.json")
                 <div 
                     class="why-card"
                     data-aos="zoom-in"
-                    data-aos-duration = "1000"
-                    data-aos-delay="${index * 100}"
+                    data-aos-duration="1000"
+                    data-aos-delay="${index * 150}"
                 >
 
                     <div class="why-icon">
-                        ${item.icon}
+                        <i class="${item.icon}"></i>
                     </div>
 
                     <h3>${item.title}</h3>
 
-                    <p>
-                        ${item.description}
-                    </p>
+                    <p>${item.description}</p>
 
                 </div>
             `;
 
         });
 
-        AOS.refreshHard();
-
+        // Tell AOS about the newly created elements
+        AOS.refresh();
     })
     .catch(error => {
         console.log("Error loading JSON:", error);
@@ -87,37 +88,44 @@ fetch("services.json")
 
         const container = document.getElementById("servicesContainer");
 
-        data.forEach(service => {
+        data.forEach((service, index) => {
 
             container.innerHTML += `
-                <div class="service-card">
+                <div 
+                    class="service-card"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="${index * 150}"
+                >
 
                     <div class="service-icon">
-                        ${service.icon}
+                        <i class="${service.icon}"></i>
                     </div>
 
                     <h2>${service.title}</h2>
 
-                    <p>
-                        ${service.description}
-                    </p>
+                    <p>${service.description}</p>
 
                 </div>
             `;
 
         });
 
+        // Refresh AOS after creating the cards
+        AOS.refresh();
     })
     .catch(error => {
         console.log("Error loading services:", error);
     });
 
-
 const galleryItems = document.querySelectorAll(".gallery a");
 
 galleryItems.forEach((item, index) => {
+
     item.setAttribute("data-aos", "fade-up");
+    item.setAttribute("data-aos-duration", "1000");
     item.setAttribute("data-aos-delay", index * 100);
+
 });
 
 AOS.refresh();

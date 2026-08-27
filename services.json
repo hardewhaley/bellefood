@@ -1,21 +1,21 @@
 [
     {
-        "icon": "🍽️",
+        "icon": "fa-solid fa-utensils",
         "title": "Dine-In",
         "description": "Enjoy freshly prepared meals in a comfortable environment."
     },
     {
-        "icon": "🛵",
+        "icon": "fa-solid fa-motorcycle",
         "title": "Home Delivery",
         "description": "Order your favorite meals and have them delivered to your doorstep."
     },
     {
-        "icon": "📦",
+        "icon": "fa-solid fa-box",
         "title": "Take Away",
         "description": "Grab your meal and enjoy it wherever you want."
     },
     {
-        "icon": "🎉",
+        "icon": "fa-solid fa-champagne-glasses",
         "title": "Event Catering",
         "description": "We provide food services for parties, birthdays, weddings, meetings and other events."
     }
