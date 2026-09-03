@@ -1,0 +1,445 @@
+/* =========================
+   ORDER PAGE
+========================= */
+
+.order-page {
+    min-height: 70vh;
+    padding: 60px 8%;
+    background: rgb(4, 10, 28);
+}
+
+.order-header {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.order-header h1 {
+    font-size: 38px;
+    color: firebrick;
+    margin-bottom: 12px;
+}
+
+.order-header p {
+    color: #f5f2f2;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* LAYOUT */
+
+.order-layout {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+
+    align-items: start;
+}
+
+
+/* PANELS */
+
+.cart-panel,
+.checkout-panel {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.cart-panel h2,
+.checkout-panel h2 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+/* TABLE WRAPPER (allows horizontal scroll on small screens) */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* CART TABLE */
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+.cart-table thead {
+    background: firebrick;
+}
+
+.cart-table thead th {
+    color: white;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.cart-table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cart-table tbody td {
+    padding: 14px;
+    color: #ddd;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+
+/* PRODUCT CELL */
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-product img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.cart-product span {
+    color: white;
+    font-size: 15px;
+}
+
+
+/* QTY CONTROLS */
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-controls button {
+    width: 26px;
+    height: 26px;
+
+    border: 1px solid firebrick;
+    background: transparent;
+    color: firebrick;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    font-size: 15px;
+    line-height: 1;
+
+    transition: 0.2s ease;
+}
+
+.qty-controls button:hover {
+    background: firebrick;
+    color: white;
+}
+
+.qty-controls span {
+    color: white;
+    min-width: 18px;
+    text-align: center;
+}
+
+
+/* LINE TOTAL */
+
+.cart-item-total {
+    color: firebrick;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* DELETE BUTTON */
+
+.remove-item {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ddd;
+
+    padding: 8px 14px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.remove-item:hover {
+    background: firebrick;
+    border-color: firebrick;
+    color: white;
+}
+
+
+/* EMPTY CART */
+
+.empty-cart {
+    text-align: center;
+    padding: 40px 0;
+    color: #ccc;
+}
+
+.empty-cart i {
+    font-size: 40px;
+    color: firebrick;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.empty-cart .btn-see-more {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+/* SUMMARY */
+
+.cart-summary {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    color: #ddd;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.total-row {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.total-row span:last-child {
+    color: firebrick;
+}
+
+
+/* CHECKOUT FORM */
+
+.checkout-panel .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.checkout-panel label {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.checkout-panel input,
+.checkout-panel select,
+.checkout-panel textarea {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+.checkout-panel input:focus,
+.checkout-panel select:focus,
+.checkout-panel textarea:focus {
+    border-color: firebrick;
+    box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.15);
+}
+
+.checkout-panel textarea {
+    resize: vertical;
+}
+
+.place-order-btn {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: firebrick;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.place-order-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.place-order-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* WHATSAPP ORDER BUTTON */
+
+.whatsapp-order-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+
+    border: 2px solid #25D366;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #25D366;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-order-btn:hover {
+    background: #25D366;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.whatsapp-order-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================
+   CONFIRMATION MODAL
+========================= */
+
+.order-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 4000;
+}
+
+.order-modal.show {
+    display: flex;
+}
+
+.order-modal-content {
+    background: white;
+
+    padding: 50px 40px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    max-width: 400px;
+
+    width: 90%;
+}
+
+.order-modal-content i {
+    font-size: 55px;
+    color: #2e9e46;
+    margin-bottom: 15px;
+}
+
+.order-modal-content h2 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.order-modal-content p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .order-page {
+        padding: 50px 6%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    .cart-item-total {
+        text-align: left;
+        margin-top: 8px;
+    }
+
+    .cart-panel,
+    .checkout-panel {
+        padding: 20px;
+    }
+}

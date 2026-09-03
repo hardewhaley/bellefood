@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Order - BELLE FOOD</title>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="nav-container">
+        <a href="index.html" style="text-decoration:none;">
+            <h1><i class="fa-solid fa-kitchen-set"></i> BelleFoods</h1>
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li>
+                <a href="menu.html" class="btn order-btn-link">
+                    Order Now
+                    <span id="cartCount" class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <section class="order-page">
+
+        <div class="order-header">
+            <h1>Your Order</h1>
+            <p>Review your items below, then complete your details to place the order.</p>
+        </div>
+
+        <div class="order-layout">
+
+            <!-- CART ITEMS -->
+            <div class="cart-panel">
+
+                <h2>Order Items</h2>
+
+                <div id="cartItems">
+                    <!-- injected by order.js -->
+                </div>
+
+                <div id="emptyCartMessage" class="empty-cart" style="display:none;">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>You haven't added any items yet.</p>
+                    <a href="index.html#menu" class="btn-see-more">Browse Menu</a>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">₦0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery Fee</span>
+                        <span id="deliveryFee">₦1,000</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span id="cartTotal">₦0</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- CHECKOUT FORM -->
+            <div class="checkout-panel">
+
+                <h2>Delivery Details</h2>
+
+                <form id="checkoutForm">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" name="address" rows="3" placeholder="Enter your full delivery address" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" name="payment" required>
+                            <option value="">Select payment method</option>
+                            <option value="cash">Cash on Delivery</option>
+                            <option value="transfer">Bank Transfer</option>
+                            <option value="card">Card Payment</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Order Notes (optional)</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Any special instructions?"></textarea>
+                    </div>
+
+                    <button type="submit" class="place-order-btn" id="placeOrderBtn">
+                        Place Order
+                    </button>
+
+                    <button type="button" class="whatsapp-order-btn" id="whatsappOrderBtn">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Place Order via WhatsApp
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONFIRMATION MODAL -->
+    <div class="order-modal" id="orderModal">
+        <div class="order-modal-content">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>Order Placed!</h2>
+            <p>Thank you! Your order has been received and is being prepared.</p>
+            <a href="index.html" class="btn-see-more">Back to Home</a>
+        </div>
+    </div>
+
+</body>
+
+<script src="cart.js"></script>
+<script src="order.js"></script>
+
+</html>

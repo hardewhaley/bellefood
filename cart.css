@@ -1,0 +1,144 @@
+/* =========================
+   NAV "ORDER NOW" BADGE
+========================= */
+
+.order-btn-link {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+
+    width: 18px;
+    height: 18px;
+
+    background: white;
+    color: firebrick;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+#cartToast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(20px);
+
+    background: firebrick;
+    color: white;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+
+    z-index: 3000;
+}
+
+#cartToast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* =========================
+   FLOATING ORDER SUMMARY BAR
+========================= */
+
+#miniCartBar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(100px);
+
+    background: firebrick;
+    color: white;
+
+    padding: 14px 20px;
+
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.35s ease;
+
+    z-index: 2000;
+}
+
+#miniCartBar.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+#miniCartText {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.mini-cart-btn {
+    background: white;
+    color: firebrick;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.mini-cart-btn:hover {
+    background: #f2f2f2;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    #miniCartBar {
+        width: 90%;
+        justify-content: space-between;
+    }
+
+}

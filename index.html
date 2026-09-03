@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BELLE FOOD</title>
     <link rel="stylesheet" href="food.css">
+<link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
@@ -22,7 +23,10 @@
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#review">Review</a></li>
             <li><a href="#contact">Contact</a></li>
-            <button class="btn">Order Now</button>
+            <a href="menu.html" class="btn order-btn-link">
+    Order Now
+    <span id="cartCount" class="cart-count">0</span>
+</a>
         </ul>
     </div>
     <div class="hero">
@@ -67,6 +71,7 @@
             <p>Discover some of our most-loved dishes, freshly prepared with quality ingredients and delicious flavors. From classic favorites to tasty specialties, our popular menu has something to satisfy every craving.</p>
             <div id="menuList">
             </div>
+             <a href="menu.html" class="btn-see-more">See More</a>
          </div>
     </section>
     <section id="whychooseus">
@@ -79,6 +84,7 @@
            <div id="whyContainer">
    
            </div>
+          
         </div>
     </section>
      <section id="services">
@@ -592,6 +598,7 @@
 </footer>
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="cart.js"></script>
 <script src="food.js"></script>
 
 <script>

@@ -11,7 +11,10 @@ fetch("food.json")
 
         const menuList = document.getElementById("menuList");
 
-        foods.forEach((food, index) => {
+        // Homepage only shows a preview — full list lives on menu.html
+        const preview = foods.slice(0, 4);
+
+        preview.forEach((food, index) => {
 
             menuList.innerHTML += `
                 <div 
@@ -30,7 +33,15 @@ fetch("food.json")
 
                     <p>₦${food.price.toLocaleString()}</p>
 
-                    <button>${food.button}</button>
+                    <button
+                        class="add-to-cart-btn"
+                        data-id="${food.id}"
+                        data-name="${food.name}"
+                        data-price="${food.price}"
+                        data-image="${food.image}"
+                    >
+                        ${food.button}
+                    </button>
 
                 </div>
             `;
@@ -44,6 +55,7 @@ fetch("food.json")
     .catch(error => {
         console.log("Error:", error);
     });
+
 
 // why choose us
 fetch("whychoose.json")
@@ -81,6 +93,7 @@ fetch("whychoose.json")
     .catch(error => {
         console.log("Error loading JSON:", error);
     });
+
 // services
 fetch("services.json")
     .then(response => response.json())

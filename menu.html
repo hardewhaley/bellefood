@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Menu - BELLE FOOD</title>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+
+    <div class="nav-container">
+        <a href="index.html" style="text-decoration:none;">
+            <h1><i class="fa-solid fa-kitchen-set"></i> BelleFoods</h1>
+        </a>
+
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li>
+                <a href="menu.html" class="btn order-btn-link">
+                    Order Now
+                    <span id="cartCount" class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <section class="menu" id="menu">
+
+        <h1>Our Full Menu</h1>
+
+        <p>
+            Browse everything we have to offer and add your
+            favorites to your order.
+        </p>
+
+        <div id="menuList"></div>
+
+    </section>
+
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="cart.js"></script>
+<script src="menu.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+</html>
