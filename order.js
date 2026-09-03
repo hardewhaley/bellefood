@@ -49,14 +49,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         <tbody>
                             ${cart.map(item => `
                                 <tr>
-                                    <td class="cart-product">
+                                    <td class="cart-product" data-label="Product">
                                         <img src="${item.image}" alt="${item.name}">
                                         <span>${item.name}</span>
                                     </td>
 
-                                    <td>${formatNaira(item.price)}</td>
+                                    <td data-label="Price">${formatNaira(item.price)}</td>
 
-                                    <td>
+                                    <td data-label="Quantity">
                                         <div class="qty-controls">
                                             <button class="qty-btn" data-id="${item.id}" data-action="decrease">-</button>
                                             <span>${item.qty}</span>
@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                         </div>
                                     </td>
 
-                                    <td class="cart-item-total">${formatNaira(item.price * item.qty)}</td>
+                                    <td class="cart-item-total" data-label="Total">${formatNaira(item.price * item.qty)}</td>
 
-                                    <td>
+                                    <td data-label="Remove">
                                         <button class="remove-item" data-id="${item.id}">
                                             Delete
                                         </button>
@@ -118,7 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* Checkout submit */
+    // Replace with your own Formspree form endpoint (see formspree.io)
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+
+    /* Checkout submit — actually sends the order to you via email */
 
     checkoutForm.addEventListener("submit", function (e) {
 
@@ -130,14 +134,52 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // In a real app, this is where you'd send the order
-        // (cart items + form details) to a backend/API.
+        const subtotal = getCartTotal();
+        const total = subtotal + deliveryFee;
 
-        clearCart();
-        renderCart();
-        checkoutForm.reset();
+        // Build a readable order summary to include with the email
+        let orderSummary = "";
 
-        orderModal.classList.add("show");
+        cart.forEach(item => {
+            orderSummary += `${item.qty} x ${item.name} - ${formatNaira(item.price * item.qty)}\n`;
+        });
+
+        orderSummary += `\nSubtotal: ${formatNaira(subtotal)}`;
+        orderSummary += `\nDelivery Fee: ${formatNaira(deliveryFee)}`;
+        orderSummary += `\nTotal: ${formatNaira(total)}`;
+
+        const formData = new FormData(checkoutForm);
+        formData.append("Order Summary", orderSummary);
+
+        placeOrderBtn.disabled = true;
+        placeOrderBtn.textContent = "Placing Order...";
+
+        fetch(FORMSPREE_ENDPOINT, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        })
+            .then(response => {
+
+                if (response.ok) {
+                    clearCart();
+                    renderCart();
+                    checkoutForm.reset();
+                    orderModal.classList.add("show");
+                } else {
+                    alert("Something went wrong sending your order. Please try the WhatsApp option instead.");
+                }
+
+            })
+            .catch(() => {
+                alert("Network error. Please check your connection, or use the WhatsApp option to place your order.");
+            })
+            .finally(() => {
+                placeOrderBtn.disabled = false;
+                placeOrderBtn.textContent = "Place Order";
+            });
 
     });
 

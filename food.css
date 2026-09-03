@@ -72,11 +72,13 @@ body{
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .nav-container .btn:hover {
     transform: translateY(-5px);
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
 
